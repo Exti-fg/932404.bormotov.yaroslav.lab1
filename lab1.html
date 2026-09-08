@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">     /*кодировка для текста*/
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О себе — Эко-активист</title>
     <style>
-        body {
+        body {       /* Общие стили для всей страницы */
             background: white;
             color: #1e3a2a;
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        header {
+        header {        /* Стили для шапки*/
             background: #1e4a2e;
             color: white;
-            padding: 15px;
+            padding: 15px;      /* Внутренние отступы */
             text-align: center;
         }
         main {
             background: white;
             padding: 15px;
-        }
+        }  /*стили для секций закруглённые*/
         .skills-section,
         .projects-section {
             border: 2px solid #4caf50;
-            border-radius: 12px;
+            border-radius: 12px;    /* Закругление углов */
             padding: 15px 20px;
             background: #f9fff9;
             margin-bottom: 20px;
         }
+         /* Боковая панель*/
         aside {
             background: #e8f5e9;
             padding: 15px;
             margin: 15px 0;
             border-left: 4px solid #4caf50;
         }
+        /*Подвал*/
         footer {
             background: #1e4a2e;
             color: #c8e6c9;
@@ -42,11 +44,12 @@
             text-align: center;
             margin-top: 20px;
         }
+        /*Стили для работы с изображением*/
         img {
             border-radius: 50%;
             border: 2px solid #4caf50;
             display: block;
-            margin: 0 auto 15px;
+            margin: 0 auto 15px; /*центрирование*/
         }
         form input,
         form textarea {
@@ -58,6 +61,7 @@
             border-radius: 4px;
             box-sizing: border-box; 
         }
+        /*стили для кнопок*/
         form button {
             background: #1e4a2e;
             color: white;
@@ -78,15 +82,15 @@
         <p>Ярослав Бормотов · Студент</p>
     </header>
 
-    <main>
+    <main>   /*Подгрузка фотки*/
         <img src="52.jpg" alt="Фото Ярослава Бормотова" width="120" height="120">
 
-        <h2>Привет, я Ярослав!</h2>
+        <h2>Привет, я Ярослав!</h2>  /*приветиственный блок*/
         <p>Я увлекаюсь экологией, участвую в субботниках и продвигаю осознанное потребление.</p>
 
         <section class="skills-section">
             <h3>Навыки</h3>
-            <ul>
+            <ul>    /*маркерованный список*/
                 <li>Исследование экологических проблем</li>
                 <li>Организация эко-мероприятий</li>
                 <li>Работа с данными и статистикой</li>
@@ -96,7 +100,7 @@
 
         <section class="projects-section">
             <h3>Проекты</h3>
-            <ol>
+            <ol>     /*Нумерованный список*/
                 <li>Субботник «Чистый берег» (2025)</li>
                 <li>Внедрение раздельного сбора в общежитии</li>
                 <li>Челлендж «30 дней без пластика»</li>
@@ -104,23 +108,24 @@
             </ol>
         </section>
 
-        <aside>
+        <aside>    /*Боковая панель*/
             <h3>♻️ Любимый принцип</h3>
             <p><strong>Zero Waste</strong> — минимизация отходов, переработка и отказ от одноразовых вещей.</p>
         </aside>
 
         <section>
             <h3>Напишите мне</h3>
-            <form>
+            <form>   /*Поля для кнопок*/
                 <input type="text" name="user_name" placeholder="Ваше имя" required>
                 <input type="email" name="user_email" placeholder="Электронная почта" required>
                 <textarea name="user_message" placeholder="Сообщение" rows="4" required></textarea>
+                /*Кнопки отправки*/
                 <button type="submit">Отправить</button>
             </form>
         </section>
     </main>
 
-    <footer>
+    <footer>      /*Подвал*/
         <p>© 2026 Ярослав Бормотов · Все права защищены</p>
     </footer>
 

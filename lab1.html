@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">     /*кодировка для текста*/
+    <meta charset="UTF-8"> <!-- кодировка для текста -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О себе — Эко-активист</title>
     <style>
-        body {       /* Общие стили для всей страницы */
+        /* Общие стили для всей страницы */
+        body {
             background: white;
             color: #1e3a2a;
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        header {        /* Стили для шапки*/
+        /* Стили для шапки */
+        header {
             background: #1e4a2e;
             color: white;
             padding: 15px;      /* Внутренние отступы */
@@ -20,7 +22,8 @@
         main {
             background: white;
             padding: 15px;
-        }  /*стили для секций закруглённые*/
+        }
+        /* Стили для секций — закруглённые прямоугольники */
         .skills-section,
         .projects-section {
             border: 2px solid #4caf50;
@@ -29,14 +32,14 @@
             background: #f9fff9;
             margin-bottom: 20px;
         }
-         /* Боковая панель*/
+        /* Боковая панель */
         aside {
             background: #e8f5e9;
             padding: 15px;
             margin: 15px 0;
             border-left: 4px solid #4caf50;
         }
-        /*Подвал*/
+        /* Подвал */
         footer {
             background: #1e4a2e;
             color: #c8e6c9;
@@ -44,24 +47,25 @@
             text-align: center;
             margin-top: 20px;
         }
-        /*Стили для работы с изображением*/
+        /* Стили для изображения */
         img {
             border-radius: 50%;
             border: 2px solid #4caf50;
             display: block;
-            margin: 0 auto 15px; /*центрирование*/
+            margin: 0 auto 15px; /* центрирование */
         }
+        /* Стили для полей формы */
         form input,
         form textarea {
             display: block;
-            width: 100%;            
+            width: 100%;
             padding: 8px;
             margin-bottom: 10px;
             border: 1px solid #a5d6a7;
             border-radius: 4px;
-            box-sizing: border-box; 
+            box-sizing: border-box;
         }
-        /*стили для кнопок*/
+        /* Стили для кнопки */
         form button {
             background: #1e4a2e;
             color: white;
@@ -77,20 +81,25 @@
 </head>
 <body>
 
+    <!-- Шапка страницы -->
     <header>
         <h1>🌱 Эко-активист</h1>
         <p>Ярослав Бормотов · Студент</p>
     </header>
 
-    <main>   /*Подгрузка фотки*/
-        <img src="52.jpg" alt="Фото Ярослава Бормотова" width="120" height="120">
+    <!-- Основной контент -->
+    <main>
+        <!-- Загрузка фотографии -->
+        <img src="image/52.jpg" alt="Фото Ярослава Бормотова" width="120" height="120">
 
-        <h2>Привет, я Ярослав!</h2>  /*приветиственный блок*/
+        <!-- Приветственный блок -->
+        <h2>Привет, я Ярослав!</h2>
         <p>Я увлекаюсь экологией, участвую в субботниках и продвигаю осознанное потребление.</p>
 
+        <!-- Маркированный список -->
         <section class="skills-section">
             <h3>Навыки</h3>
-            <ul>    /*маркерованный список*/
+            <ul>
                 <li>Исследование экологических проблем</li>
                 <li>Организация эко-мероприятий</li>
                 <li>Работа с данными и статистикой</li>
@@ -98,9 +107,10 @@
             </ul>
         </section>
 
+        <!-- Нумерованный список -->
         <section class="projects-section">
             <h3>Проекты</h3>
-            <ol>     /*Нумерованный список*/
+            <ol>
                 <li>Субботник «Чистый берег» (2025)</li>
                 <li>Внедрение раздельного сбора в общежитии</li>
                 <li>Челлендж «30 дней без пластика»</li>
@@ -108,24 +118,27 @@
             </ol>
         </section>
 
-        <aside>    /*Боковая панель*/
+        <!-- Боковая панель -->
+        <aside>
             <h3>♻️ Любимый принцип</h3>
             <p><strong>Zero Waste</strong> — минимизация отходов, переработка и отказ от одноразовых вещей.</p>
         </aside>
 
+        <!-- Форма обратной связи -->
         <section>
             <h3>Напишите мне</h3>
-            <form>   /*Поля для кнопок*/
+            <form>
                 <input type="text" name="user_name" placeholder="Ваше имя" required>
                 <input type="email" name="user_email" placeholder="Электронная почта" required>
                 <textarea name="user_message" placeholder="Сообщение" rows="4" required></textarea>
-                /*Кнопки отправки*/
+                <!-- Кнопка отправки -->
                 <button type="submit">Отправить</button>
             </form>
         </section>
     </main>
 
-    <footer>      /*Подвал*/
+    <!-- Подвал -->
+    <footer>
         <p>© 2026 Ярослав Бормотов · Все права защищены</p>
     </footer>
 

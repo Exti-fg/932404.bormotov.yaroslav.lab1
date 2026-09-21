@@ -1,0 +1,189 @@
+/* =========================================
+   1. CSS-ПЕРЕМЕННЫЕ И БАЗА
+   ========================================= */
+:root {
+    --main-color: #E8F5E9;       /* светло-зелёный */
+    --accent-color: #1B5E20;     /* тёмно-зелёный */
+    --text-color: #212121;       /* тёмный текст (контраст > 4.5:1) */
+    --bg-color: #FFFFFF;
+
+    --font-main: 'Segoe UI', Tahoma, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-main);
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 { color: var(--accent-color); margin-bottom: 15px; }
+p { margin-bottom: 10px; }
+
+/* =========================================
+   2. ШАПКА И АВАТАР
+   ========================================= */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: var(--main-color);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+
+.subtitle { color: var(--text-color); font-size: 1.1em; }
+
+/* =========================================
+   3. НАВЫКИ: АНИМАЦИЯ + ПСЕВДОЭЛЕМЕНТЫ
+   ========================================= */
+.skills-list { list-style: none; }
+
+.skills-list li {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background: var(--main-color);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    animation: sprout 1.5s ease-out forwards;
+    position: relative;
+}
+
+.skills-list li:nth-child(1) { animation-delay: 0.2s; }
+.skills-list li:nth-child(2) { animation-delay: 0.6s; }
+.skills-list li:nth-child(3) { animation-delay: 1.0s; }
+.skills-list li:nth-child(4) { animation-delay: 1.4s; }
+
+@keyframes sprout {
+    from { opacity: 0; transform: translateY(30px) scale(0.9); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Плавное появление листика */
+.skills-list li::before {
+    content: "🌿 ";
+    font-size: 1.1em;
+    opacity: 0;
+    transform: translateX(-10px) scale(0.8);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: inline-block;
+}
+
+.skills-list li:hover::before {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+.skills-list li:hover { background: #C8E6C9; }
+.skills-list li:active { letter-spacing: -0.5px; transform: scale(0.98); }
+
+/* =========================================
+   4. ПРОЕКТЫ
+   ========================================= */
+   .projects-section {
+    position: static;   
+    margin-bottom: 30px;
+}
+.projects-list { padding-left: 25px; }
+.projects-list li { margin-bottom: 8px; }
+
+/* =========================================
+   5. БОКОВАЯ ПАНЕЛЬ (ПОЗИЦИОНИРОВАНИЕ)
+   ========================================= */
+.eco-aside {
+    position: relative;
+    background: var(--main-color);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed var(--accent-color);
+    margin-bottom: 30px;
+}
+
+.eco-badge {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    padding: 6px 12px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.85em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   6. ФОРМА И СОСТОЯНИЯ
+   ========================================= */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-main);
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(27, 94, 32, 0.3);
+}
+
+.contact-form button {
+    padding: 12px;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.05em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover { background: #2E7D32; }
+.contact-form button:active { transform: scale(0.97); }
+
+/* =========================================
+   7. ССЫЛКИ И СОСТОЯНИЯ
+   ========================================= */
+a { color: var(--accent-color); text-decoration: none; font-weight: 500; }
+a:visited { color: #4A148C; }
+a:hover { text-decoration: underline; }
+a:active { color: #000; }
+
+/* =========================================
+   8. ФУТЕР (база — тени и выравнивание во внутреннем <style> в HTML)
+   ========================================= */
+footer {
+    background: var(--main-color);
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.footer-link { font-weight: normal; }

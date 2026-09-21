@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О себе — Эко-активист</title>
+
+    <!-- Внешний CSS-файл (основной стиль) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Внутренний блок <style>: только для footer (тени + выравнивание) -->
+    <style>
+        footer {
+            text-align: center;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <!-- Inline-стиль: border-radius: 50% для аватара -->
+        <img src="52.jpg" alt="Аватар Ярослава" class="avatar" 
+             width="120" height="120" style="border-radius: 50%;">
+        <div class="header-text">
+            <h1>🌱 Эко-активист</h1>
+            <p class="subtitle">Ярослав Бормотов · Студент</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Привет, я Ярослав!</h2>
+            <p>Я увлекаюсь экологией, участвую в субботниках и продвигаю осознанное потребление.</p>
+        </section>
+
+        <section class="skills-section">
+            <h2>Навыки</h2>
+            <ul class="skills-list">
+                <li>Исследование экологических проблем</li>
+                <li>Организация эко-мероприятий</li>
+                <li>Работа с данными и статистикой</li>
+                <li>Эко-просвещение</li>
+            </ul>
+        </section>
+
+        <section class="projects-section">
+            <h2>Проекты</h2>
+            <ol class="projects-list">
+                <li>Субботник «Чистый берег» (2025)</li>
+                <li>Внедрение раздельного сбора в общежитии</li>
+                <li>Челлендж «30 дней без пластика»</li>
+                <li>Посадка 25 деревьев в городском парке</li>
+            </ol>
+        </section>
+
+        <aside class="eco-aside">
+            <h2>♻️ Любимый принцип</h2>
+            <p>Zero Waste — минимизация отходов, переработка и отказ от одноразовых вещей.</p>
+            <span class="eco-badge">ECO</span>
+        </aside>
+
+        <section class="contact-section">
+            <h2>Напишите мне</h2>
+            <form action="#" method="post" class="contact-form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш Email" required>
+                <textarea name="message" placeholder="Ваше сообщение" rows="4" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Ярослав Бормотов · Все права защищены | 
+           <a href="https://github.com/Exti-fg" class="footer-link">Мой GitHub</a>
+        </p>
+    </footer>
+
+
+</body>
+</html>
